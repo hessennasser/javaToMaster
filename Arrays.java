@@ -39,7 +39,7 @@ public class Main {
             System.out.printf("%d ,", arr[i]);
         }
         System.out.print("\b\b]");
-    }}
+    }
 
     /**
     * Calculates the occurrences of a specific number in an integer array.
@@ -54,4 +54,29 @@ public class Main {
         }
         System.out.printf("%d occurs %d times\n", number, occurrences);
     }
+    
+    /**
+    * Finds the minimum and maximum values in an integer array.
+    *
+    * @param arr The array of integers.
+    * @return An array containing the minimum and maximum values (index 0: minimum, index 1: maximum).
+    */
+    public static int[] findMinAndMax(int[] arr) {
+        int[] result = new int[2];
+        int min = arr[0];
+        int max = arr[0];
 
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= max) {
+                max = arr[i];
+            }
+            if (arr[i] <= min) {
+                min = arr[i];
+            }
+        }
+
+        result[0] = min;
+        result[1] = max;
+        return result;
+    }
+}
