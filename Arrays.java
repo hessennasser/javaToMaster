@@ -9,14 +9,14 @@ public class Main {
     }
 
     /**
-     * Reverses the order of elements in an integer array.
-     *
-     * This method takes an integer array as input and returns a new array
-     * containing the elements of the input array in reverse order.
-     *
-     * @param arr The input integer array to be reversed.
-     * @return A new array with elements in reverse order.
-     */
+    * Reverses the order of elements in an integer array.
+    *
+    * This method takes an integer array as input and returns a new array
+    * containing the elements of the input array in reverse order.
+    *
+    * @param arr The input integer array to be reversed.
+    * @return A new array with elements in reverse order.
+    */
     public static int[] reversArray(int arr[]) {
         int[] reversedArr = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -24,14 +24,15 @@ public class Main {
         }
         return reversedArr;
     }
+    
     /**
-     * Prints the elements of an integer array.
-     *
-     * This method takes an integer array as input and prints its elements
-     * in a formatted way, enclosed in square brackets.
-     *
-     * @param arr The input integer array to be printed.
-     */
+    * Prints the elements of an integer array.
+    *
+    * This method takes an integer array as input and prints its elements
+    * in a formatted way, enclosed in square brackets.
+    *
+    * @param arr The input integer array to be printed.
+    */
     public static void printArray(int arr[]) {
         System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
@@ -39,3 +40,18 @@ public class Main {
         }
         System.out.print("\b\b]");
     }}
+
+    /**
+    * Calculates the occurrences of a specific number in an integer array.
+    *
+    * @param arr    The array of integers.
+    * @param number The target number to count occurrences.
+    */
+    public static void calcOccurrences(int[] arr, int number) {
+        int occurrences = 0;
+        for (int i = 0; i < arr.length; i++) {
+            occurrences += arr[i] == number ? 1 : 0;
+        }
+        System.out.printf("%d occurs %d times\n", number, occurrences);
+    }
+
